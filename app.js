@@ -5,6 +5,25 @@ $(document).ready(function(){
     let secondNumber;
     let operator;
 
+    setInterval(function (){
+
+        if(window.innerWidth<576){
+
+            document.getElementById("divId").classList.remove("offset-3");
+            document.getElementById("result").classList.remove("display-1");
+            document.getElementById("result").classList.add("display-4");
+            document.getElementById("divId").classList.add("col-12");
+
+
+        }
+        else if(window.innerWidth>575){
+
+            document.getElementById("divId").classList.add("offset-3");
+            document.getElementById("result").classList.remove("display-4");
+            document.getElementById("result").classList.add("display-1");
+        }
+
+    },500)
 
     $('.number').click(function(){
         
